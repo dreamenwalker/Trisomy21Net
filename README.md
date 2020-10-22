@@ -1,5 +1,5 @@
 # Trisomy21Net
-### end-to-end Predictions
+### End-to-end Predictions
 This project is a tool to construct Trisomy21Net models, written in Keras and tensorflow.
 Trisomy21Net is a CNN algorithm that can screen fetuses with trisomy 21 from normal cases based on ultrasound images. 
 Our architecture is consisted of 11 layers.
@@ -12,3 +12,6 @@ We train our model in ubuntu with 4 Titan xp. If you use >= CUDA 9, make sure yo
 ## Experiments
 Model comparison and visualization is based on Gad-CAM, more details please see the paper : https://arxiv.org/pdf/1610.02391v1.pdf.
 Our module of callback function refers to https://arxiv.org/pdf/1711.05225.pdf.
+#Setting
+For training, we set batch size of 48, initial learning rate of 0.0001,epoch of 300.
+The trained weight is 'titansun09160837-300-0.941-0.956.h5'.
