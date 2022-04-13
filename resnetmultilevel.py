@@ -193,7 +193,7 @@ def resnet_self(input_tensor = None, include_top=True,num_outputs=1,
 
     gpC5 = GlobalAveragePooling2D(dim_ordering='default', name='global_pool5')(C5_output)
     gpC6 = GlobalAveragePooling2D(dim_ordering='default', name='global_pool6')(C5)
-    gpCall= [gpC1,gpC2,gpC3,gpC4,gpC5,gpC6]
+    gpCall= [gpC5,gpC6]
     featureall = KL.concatenate(gpCall)
     merge1 = Dense(64, activation='relu', name='Dense1')(featureall)
     merge1 = KL.Dropout(0.6,name = 'dropout')(merge1)
